@@ -1,0 +1,11 @@
+order_id,customer_name,product,quantity,price,total_amount
+1,Ravi,Laptop,1,50000,50000
+2,Sita,Mouse,2,500,1000
+3,Ram,Keyboard,1,1500,1500
+4,John,Monitor,1,12000,12000
+5,Rani,Mouse,3,500,1500
+6,Ravi,Laptop,1,50000,50000
+7,Ajay,Mouse,2,500,1000
+8,Priya,Keyboard,2,1500,3000
+9,Kiran,Monitor,1,12000,12000
+10,Meena,Laptop,1,50000,50000
