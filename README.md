@@ -2,33 +2,91 @@
 
 ## Overview
 
-A Data Engineering project that demonstrates the ETL (Extract, Transform, Load) process using Python, Pandas, PostgreSQL, and SQL.
+This project demonstrates an ETL (Extract, Transform, Load) pipeline built using Python, Pandas, PostgreSQL, and SQL. The pipeline processes retail sales data, performs data cleaning and transformation, and loads the processed data into PostgreSQL for reporting and analysis.
 
 ## Technologies Used
 
 * Python
 * Pandas
 * PostgreSQL
-* SQLAlchemy
 * SQL
+* SQLAlchemy
+* Git & GitHub
 
-## Workflow
+## Project Workflow
 
-1. Extract sales data from CSV files
-2. Transform data by cleaning records and calculating metrics
-3. Load transformed data into PostgreSQL
-4. Generate business reports using SQL queries
+### Extract
+
+* Read retail sales data from CSV files using Pandas.
+
+### Transform
+
+* Cleaned and validated sales data.
+* Performed data transformation and revenue calculations.
+* Improved data quality through validation checks.
+
+### Load
+
+* Loaded transformed data into PostgreSQL using SQLAlchemy.
+* Stored processed records for reporting and analysis.
 
 ## Project Structure
 
-* extract.py – Reads raw sales data
-* transform.py – Cleans and transforms data
-* load.py – Loads data into PostgreSQL
-* schema.sql – Database schema
-* queries.sql – Reporting queries
+retail-sales-etl-pipeline/
 
-## Sample Reports
+├── data/
 
-* Total Revenue
-* Product-wise Revenue Analysis
-* Sales Record Validation
+│   ├── sales_data.csv
+
+│   └── cleaned_sales.csv
+
+├── scripts/
+
+│   ├── extract.py
+
+│   ├── transform.py
+
+│   ├── load.py
+
+│   └── main.py
+
+├── sql/
+
+│   ├── schema.sql
+
+│   └── queries.sql
+
+├── requirements.txt
+
+├── .gitignore
+
+└── README.md
+
+## Sample SQL Reports
+
+### Total Revenue
+
+SELECT SUM(total_amount) AS total_revenue
+FROM sales;
+
+### Product-wise Revenue Analysis
+
+SELECT product,
+SUM(total_amount) AS total_revenue
+FROM sales
+GROUP BY product;
+
+## Key Features
+
+* ETL Pipeline Development
+* Data Cleaning and Transformation
+* PostgreSQL Integration
+* SQL Reporting and Analysis
+* Workflow Automation using Python
+
+## Future Enhancements
+
+* Azure Data Factory Integration
+* Cloud Storage Integration
+* Automated Scheduling using Apache Airflow
+* Dashboard Creation using Power BI
